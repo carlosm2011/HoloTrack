@@ -1,0 +1,347 @@
+{
+    "Version": 1,
+    "UUID": "761fafcf-2da5-42d7-8f6a-bb3535454543",
+    "Name": "holotrack",
+    "Properties": {
+        "description": "Project management tool",
+        "language": "en"
+    },
+    "PropertiesSchemaFile": "properties_schema.json",
+    "BasedOn": {
+        "H": null
+    },
+    "RequiresVersion": 0,
+    "DHTConfig": {
+        "HashType": "sha2-256",
+        "NeighborhoodSize": 0
+    },
+    "Progenitor": {
+        "Identity": "",
+        "PubKey": null
+    },
+    "Zomes": [
+        {
+            "Name": "project",
+            "Description": "to track info about a project",
+            "CodeFile": "project.js",
+            "RibosomeType": "js",
+            "BridgeFuncs": null,
+            "Config": null,
+            "Entries": [
+                {
+                    "Name": "name",
+                    "DataFormat": "string",
+                    "Schema": "",
+                    "SchemaFile": "",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "tags",
+                    "DataFormat": "links",
+                    "Schema": "",
+                    "SchemaFile": "",
+                    "Sharing": "public"
+                }
+            ],
+            "Functions": [
+                {
+                    "Name": "nameCreate",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "nameRead",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "nameUpdate",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "nameDelete",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "tagsCreate",
+                    "CallingType": "links",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "tagsRead",
+                    "CallingType": "links",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "tagsUpdate",
+                    "CallingType": "links",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "tagsDelete",
+                    "CallingType": "links",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "tagProject",
+                    "CallingType": "json",
+                    "Exposure": ""
+                }
+            ]
+        },
+        {
+            "Name": "phases",
+            "Description": "Phases of a project",
+            "CodeFile": "phases.js",
+            "RibosomeType": "js",
+            "BridgeFuncs": null,
+            "Config": null,
+            "Entries": [
+                {
+                    "Name": "name",
+                    "DataFormat": "string",
+                    "Schema": "",
+                    "SchemaFile": "",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "timeframe",
+                    "DataFormat": "json",
+                    "Schema": "",
+                    "SchemaFile": "",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "tags",
+                    "DataFormat": "links",
+                    "Schema": "",
+                    "SchemaFile": "",
+                    "Sharing": "public"
+                }
+            ],
+            "Functions": [
+                {
+                    "Name": "nameCreate",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "nameRead",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "timeframeCreate",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "timeframeRead",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "tagsCreate",
+                    "CallingType": "links",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "tagsRead",
+                    "CallingType": "links",
+                    "Exposure": "public"
+                }
+            ]
+        },
+        {
+            "Name": "tasks",
+            "Description": "Track individual tasks",
+            "CodeFile": "tasks.js",
+            "RibosomeType": "js",
+            "BridgeFuncs": null,
+            "Config": null,
+            "Entries": [
+                {
+                    "Name": "name",
+                    "DataFormat": "string",
+                    "Schema": "",
+                    "SchemaFile": "",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "assignUser",
+                    "DataFormat": "links",
+                    "Schema": "",
+                    "SchemaFile": "",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "priority",
+                    "DataFormat": "json",
+                    "Schema": "",
+                    "SchemaFile": "",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "status",
+                    "DataFormat": "string",
+                    "Schema": "",
+                    "SchemaFile": "",
+                    "Sharing": "public"
+                }
+            ],
+            "Functions": [
+                {
+                    "Name": "nameCreate",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "nameRead",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "assignUserCreate",
+                    "CallingType": "links",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "assignUserRead",
+                    "CallingType": "links",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "priorityCreate",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "priorityRead",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "statusCreate",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "statusRead",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                }
+            ]
+        },
+        {
+            "Name": "Comments",
+            "Description": "Comments on, tasks, projects or issues",
+            "CodeFile": "Comments.js",
+            "RibosomeType": "js",
+            "BridgeFuncs": null,
+            "Config": null,
+            "Entries": [
+                {
+                    "Name": "text",
+                    "DataFormat": "string",
+                    "Schema": "",
+                    "SchemaFile": "",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "about",
+                    "DataFormat": "links",
+                    "Schema": "",
+                    "SchemaFile": "",
+                    "Sharing": "public"
+                }
+            ],
+            "Functions": [
+                {
+                    "Name": "textCreate",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "textRead",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "aboutCreate",
+                    "CallingType": "links",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "aboutRead",
+                    "CallingType": "links",
+                    "Exposure": "public"
+                }
+            ]
+        },
+        {
+            "Name": "Issues",
+            "Description": "Keep track of issues",
+            "CodeFile": "Issues.js",
+            "RibosomeType": "js",
+            "BridgeFuncs": null,
+            "Config": null,
+            "Entries": [
+                {
+                    "Name": "title",
+                    "DataFormat": "string",
+                    "Schema": "",
+                    "SchemaFile": "",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "details",
+                    "DataFormat": "json",
+                    "Schema": "",
+                    "SchemaFile": "",
+                    "Sharing": "public"
+                },
+                {
+                    "Name": "about",
+                    "DataFormat": "links",
+                    "Schema": "",
+                    "SchemaFile": "",
+                    "Sharing": "public"
+                }
+            ],
+            "Functions": [
+                {
+                    "Name": "titleCreate",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "titleRead",
+                    "CallingType": "string",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "detailsCreate",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "detailsRead",
+                    "CallingType": "json",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "aboutCreate",
+                    "CallingType": "links",
+                    "Exposure": "public"
+                },
+                {
+                    "Name": "aboutRead",
+                    "CallingType": "links",
+                    "Exposure": "public"
+                }
+            ]
+        }
+    ]
+}
