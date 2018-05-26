@@ -2,7 +2,7 @@
 
 A distributed Project Management Holochain app prototype developed during the Austin Holochain Hackathon!
 
-![CreatePost](newCraigsList.gif)
+![CreatePost](giphy.gif)
 
 ## Getting Started
 
